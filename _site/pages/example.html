@@ -65,220 +65,109 @@
 
         <div class="site">
 
-          <!-- <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-<nav id="ml-menu" class="menu">
-  <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-  <div class="menu__wrap">
-    <ul data-menu="main" class="menu__level">
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
-    </ul>
-    <!-- Submenu 1 -->
-    <ul data-menu="submenu-1" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
-    </ul>
-    <!-- Submenu 1-1 -->
-    <ul data-menu="submenu-1-1" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
-    </ul>
-    <!-- Submenu 2 -->
-    <ul data-menu="submenu-2" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
-    </ul>
-    <!-- Submenu 2-1 -->
-    <ul data-menu="submenu-2-1" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
-    </ul>
-    <!-- Submenu 3 -->
-    <ul data-menu="submenu-3" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
-    </ul>
-    <!-- Submenu 3-1 -->
-    <ul data-menu="submenu-3-1" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
-    </ul>
-    <!-- Submenu 4 -->
-    <ul data-menu="submenu-4" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
-      <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
-    </ul>
-    <!-- Submenu 4-1 -->
-    <ul data-menu="submenu-4-1" class="menu__level">
-      <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="content">
-  <p class="info">Please choose a category</p>
-  <!-- Ajax loaded content here -->
-</div>
-</div>
-<!-- /view -->
-<script src="js/classie.js"></script>
-<script src="js/dummydata.js"></script>
-<script src="js/main.js"></script>
-<script>
-(function() {
-var menuEl = document.getElementById('ml-menu'),
-  mlmenu = new MLMenu(menuEl, {
-    // breadcrumbsCtrl : true, // show breadcrumbs
-    // initialBreadcrumb : 'all', // initial breadcrumb text
-    backCtrl : false, // show back button
-    // itemsDelayInterval : 60, // delay between each menu item sliding animation
-    onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-  });
-
-// mobile menu toggle
-var openMenuCtrl = document.querySelector('.action--open'),
-  closeMenuCtrl = document.querySelector('.action--close');
-
-openMenuCtrl.addEventListener('click', openMenu);
-closeMenuCtrl.addEventListener('click', closeMenu);
-
-function openMenu() {
-  classie.add(menuEl, 'menu--open');
-}
-
-function closeMenu() {
-  classie.remove(menuEl, 'menu--open');
-}
-
-// simulate grid content loading
-var gridWrapper = document.querySelector('.content');
-
-function loadDummyData(ev, itemName) {
-  ev.preventDefault();
-
-  closeMenu();
-  gridWrapper.innerHTML = '';
-  classie.add(gridWrapper, 'content--loading');
-  setTimeout(function() {
-    classie.remove(gridWrapper, 'content--loading');
-    gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-  }, 700);
-}
-})();
-</script>
- -->
-
-
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a href="https://github.com/jtclark84/prahs" class="navbar-brand">PRAHS Brand UI </a>
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            <!-- <div class="container">
+    <div class="sidebar main-menu  navbar-fixed-top">
+      <ul class="nav">
+        <li><a href="#" class="menu-menu sficon-menu" title="" data-original-title="Menu"></a></li>
+        <li><a href="#" onclick="javascript:window.history.back(-1);return false;" class="menu-back sficon-left" title="" data-original-title="Back"></a></li>
+        <li><a href="nearby.cfm" class="menu-location sficon-location" title="" data-original-title="Nearby"></a></li>
+        <li><a href="bookmarks.cfm" class="menu-bookmarks sficon-star" title="" data-original-title="Bookmarks"></a></li>
+        <li><a href="search.cfm?date=today" class="menu-search sficon-search" title="" data-original-title="Search"></a></li>
+         <li><a href="https://www.facebook.com/pages/SFArtsorg/168761266512929" class="menu-location sficon-facebook" title="" style="opacity: .3;" data-original-title="Facebook"></a></li>
+        <li><a href="https://twitter.com/SF_ARTS" class="menu-location sficon-twitter" title="" style="opacity: .3;" data-original-title="Twitter"></a></li>
+      </ul>
     </div>
-    <!-- <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
+  </div> -->
 
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">prahs <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="download">
-            <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
-            <li><a href="./bootstrap.css">bootstrap.css</a></li>
-            <li class="divider"></li>
-            <li><a href="./_variables.scss">_variables.scss</a></li>
-            <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
-          </ul>
-        </li>
-      </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-      </ul>
+  <nav class="navbar navbar-default m0">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
 
-    </div> -->
-    <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">prahs <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="download">
-            <li><a class="" href="#navbar">Navbar</a></li>
-            <li><a class="" href="#buttons">Buttons</a></li>
-          <li>  <a class="" href="#typography">Typography</a></li>
-            <li><a class="" href="#tables">Tables</a></li>
-            <li><a class="" href="#forms">Forms</a></li>
-            <li><a class="" href="#navs">Navs</a></li>
-            <li><a class="" href="#indicators">Indicators</a></li>
-            <li><a class="" href="#progress-bars">Progress bars</a></li>
-            <li><a class="" href="#containers">Containers</a></li>
-            <li><a class="" href="#dialogs">Dialogs</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://getbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-      </ul>
-
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
+  </nav>
 
+
+
+  <div class="container-fluid  p_xx  color-black" style="background-image: url(http://partners.prahs.com/takeda/assets/img/bikes.jpg);
+background-size: cover;">
+<div class="container"
+      <div class="row  mt">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="u-textCenter">
+            <div class="label pageTitle label-alt">Page Name</div>
+            <h1 class="p_x klinic">Inspiring Kindness, <br><strong>Empowering Action. </strong>
+            </h1>
+            <!-- <h6>THIS IS A SUB HEADLINE IN AVENIR NEXT BOLD ALL CAPS 1/3RD PRIMARY HEADLINE SIZE</h6> -->
+          </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="poly  pink">
+  <div class="container"
+          <div class="row  mt">
+            <div class="col-lg-10 col-lg-offset-1">
+              <div class="u-textCenter">
+                <h3 class="avenir bold caps">This is a two line headline  in Klinic Slab Medium
+                </h3>
+                <h6>THIS IS A SUB HEADLINE IN AVENIR NEXT BOLD ALL CAPS 1/3RD PRIMARY HEADLINE SIZE</h6>
+              </div>
+              <div class="mt">
+                <p class="avenir"><strong>This is body copy in Avenir Next Regular. </strong>Ari ulla nihiciam quisquo tescien tecumen dendeli quibus dolorporro odit omnis aut eatemolupta quas quam fuga. Tempedi rem ex et quiandi nam doluptat es nesequia denit odit etus rero quis arunt re volor sintibus eos porianim alignis eosamus re dolum comnisinusda volupid ucilla que volori solectiae dolectataspe ommo consequi voluptatur si doles explatiur?
+                  Musdam, ullatur res quo quam doluptas re liquatisto incipsam ersped moluptat ipid utasitam, alique ea conet fuga. Utempor erferum vel everciet faccatibus aut eiur molupta turibus molorer ibusapic tem quiaepeleni ut aliquod ma volupta invenih ilique id et magnati optatec aestint facculpa acid quodit eost vellibusaes nobis volo explaut.</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 
 <div class="container">
 
-  <!-- <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-6">
-        <h1>PRAHS UI</h1>
-        <p class="lead">Examples of PRA branded UI and UX</p>
-      </div>
 
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <div class="list-group table-of-contents">
-          <a class="list-group-item" href="#navbar">Navbar</a>
-          <a class="list-group-item" href="#buttons">Buttons</a>
-          <a class="list-group-item" href="#typography">Typography</a>
-          <a class="list-group-item" href="#tables">Tables</a>
-          <a class="list-group-item" href="#forms">Forms</a>
-          <a class="list-group-item" href="#navs">Navs</a>
-          <a class="list-group-item" href="#indicators">Indicators</a>
-          <a class="list-group-item" href="#progress-bars">Progress bars</a>
-          <a class="list-group-item" href="#containers">Containers</a>
-          <a class="list-group-item" href="#dialogs">Dialogs</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Navbar
   ================================================== -->
@@ -290,47 +179,7 @@ function loadDummyData(ev, itemName) {
         </div>
 
         <div class="bs-component">
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
-              </div>
 
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Link</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
         </div>
 
         <!-- BEGIN FULL WIDTH SECTION -->
@@ -826,48 +675,11 @@ function loadDummyData(ev, itemName) {
       </div>
     </div>
     <div class="bs-component">
-      <div class="container-fluid  p_xx  poly  pink">
-<div class="container"
-          <div class="row  mt">
-            <div class="col-lg-10 col-lg-offset-1">
-              <div class="u-textCenter">
-                <h1 class="m0">This is a two line headline  in Klinic Slab Medium
-                </h1>
-                <h6>THIS IS A SUB HEADLINE IN AVENIR NEXT BOLD ALL CAPS 1/3RD PRIMARY HEADLINE SIZE</h6>
-              </div>
-              <div class="mt">
-                <p class="avenir"><strong>This is body copy in Avenir Next Regular. </strong>Ari ulla nihiciam quisquo tescien tecumen dendeli quibus dolorporro odit omnis aut eatemolupta quas quam fuga. Tempedi rem ex et quiandi nam doluptat es nesequia denit odit etus rero quis arunt re volor sintibus eos porianim alignis eosamus re dolum comnisinusda volupid ucilla que volori solectiae dolectataspe ommo consequi voluptatur si doles explatiur?
-                  Musdam, ullatur res quo quam doluptas re liquatisto incipsam ersped moluptat ipid utasitam, alique ea conet fuga. Utempor erferum vel everciet faccatibus aut eiur molupta turibus molorer ibusapic tem quiaepeleni ut aliquod ma volupta invenih ilique id et magnati optatec aestint facculpa acid quodit eost vellibusaes nobis volo explaut.</p>
-                </div>
-              </div>
 
-
-            </div>
-          </div>
-        </div>
         </div>
 
 
-        <div class="bs-component">
-          <div class="container-fluid  p_xx  color-black" style="background-image: url(http://partners.prahs.com/takeda/assets/img/bikes.jpg);
-    background-size: cover;">
-    <div class="container"
-              <div class="row  mt">
-                <div class="col-lg-10 col-lg-offset-1">
-                  <div class="u-textCenter">
-                    <div class="label pageTitle label-alt">Page Name</div>
-                    <h1 class="p_x klinic">Inspiring Kindness, <br><strong>Empowering Action. </strong>
-                    </h1>
-                    <!-- <h6>THIS IS A SUB HEADLINE IN AVENIR NEXT BOLD ALL CAPS 1/3RD PRIMARY HEADLINE SIZE</h6> -->
-                  </div>
 
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-            </div>
 
         <!-- BEGIN FULL WIDTH SECTION -->
             </div></div><div class="bs-component">
@@ -1908,13 +1720,19 @@ function loadDummyData(ev, itemName) {
 
 </div>
 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
 
-
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/scss/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/assets/js/custom.js"></script>
-<!-- </body>
-</html> -->
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
 
 
         </div>

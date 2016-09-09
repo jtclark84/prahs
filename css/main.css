@@ -7900,6 +7900,9 @@ h2.avenir-bold {
   margin-bottom: 25px;
   border-bottom: 2px solid #979797; }
 
+h1.avenir, h2.avenir, h3.avenir, h4.avenir, h4.avenir {
+  letter-spacing: 4px; }
+
 .btn {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -7975,7 +7978,8 @@ h1 {
   fill: #ace63c;
   background: url(../assets/pattern.svg) no-repeat 100%;
   background-blend-mode: hard-light;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 80px; }
 
 .fancy-border {
   width: 100%;
@@ -8328,3 +8332,59 @@ h1 {
   .menu--open {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+
+@media only screen and (min-width: 600px) {
+  #bs-example-navbar-collapse-1 {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100% !important;
+    background: #004ebc url("../images/sfarts-icon.svg") no-repeat 50% 93%;
+    background-size: 18px 230px;
+    width: 440px; } }
+
+@media only screen and (min-width: 600px) {
+  .navbar-collapse.collapse {
+    display: none !important; }
+  .navbar-collapse.collapse.in {
+    display: block !important; }
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important; }
+  .navbar-header {
+    float: none; } }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+#site {
+  transition: margin-left .5s;
+  padding: 16px;
+  background: #000;
+  width: 75px;
+  position: fixed;
+  padding-right: 60px;
+  height: 100vh; }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }
+
+.navbar-side {
+  background-color: #000; }

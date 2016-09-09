@@ -9,6 +9,13 @@ h2.avenir-bold{
     border-bottom: 2px solid #979797;
   }
 
+  h1, h2, h3, h4, h4 {
+    &.avenir{
+      letter-spacing: $headings-letter-spacing;
+    }
+
+    }
+
   // h1.bold{
   //     font-family: $font-family-serif-bold;
   //     letter-spacing: 1px;
@@ -130,6 +137,7 @@ h1{
   background-blend-mode: hard-light;
   // background-color: #EA1B75;
   color: #ffffff;
+  padding: 80px;
 }
 
 
