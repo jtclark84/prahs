@@ -13,7 +13,6 @@
 @import "../prahs/variables/spacing";
 @import "../prahs/variables/type";
 
-
 @import "../prahs/generic/mixins";
 @import "../prahs/generic/spacing";
 @import "../prahs/generic/tools";
@@ -22,7 +21,9 @@
 @import "../scss/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../scss/bower_components/prahscl-brand/assets/stylesheets/bootstrap";
 
-@import "../prahs/bootswatch";
+
+@import "../prahs/prahs2.5";
 @import "../prahs/custom";
 
 @import "../prahs/sidebar";
+@import "nav";
